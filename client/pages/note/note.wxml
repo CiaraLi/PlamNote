@@ -1,0 +1,21 @@
+<view class="group-bunner">
+  <view class='fl'>
+    <input class='text group-text' placeholder="添加新分组" auto-focus value="{{groupName}}" maxlength='10' bindinput="bindgroupName" />
+  </view>
+  <view class='fr'>
+    <button class="btn-addgroup" wx:if="{{!userInfo.nickName}}" bindtap='AddGroup'>确定</button>
+  </view>
+</view>
+<view class="group-box">
+  <view class="group" wx:for="{{groups}}">
+    <view id='g_{{index}}' bindtap='openGroup' bindlongtap='showDeleteGroup'>
+      <label for='g_{{index}}' class='fl group-title hidetext'>
+        {{item.group_name}}
+      </label>
+      <view class='fr group-num hidetext'>
+        {{item.notecount}}
+      </view>
+    </view>
+  </view>
+</view>
+ 
