@@ -156,7 +156,7 @@ class Studay
         if (in_array($num, [6]) && 22 > date('H')) {
             $num = rand(1, 20);
         }
-        $image = "https://xesbook-static.oss-cn-beijing.aliyuncs.com/source/uploads/loops/20201010/{$num}.png?x-oss-process=image/resize,m_pad,h_250,w_500,color_000000/quality,q_90";
+        $image = "https://static.oss-cn-beijing.aliyuncs.com/source/uploads/loops/20201010/{$num}.png?x-oss-process=image/resize,m_pad,h_250,w_500,color_000000/quality,q_90";
         return $image;
     }
 
